@@ -1,3 +1,3 @@
-import createCanvas from '/modules/createCanvas.js';
+import createCanvas from './modules/createCanvas.js';
 
 createCanvas();
