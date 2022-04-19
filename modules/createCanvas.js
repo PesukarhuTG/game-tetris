@@ -22,7 +22,7 @@ const createCanvas = () => {
         const block = line[x];
 
         if (block === 'x') {
-          context.fillStyle = 'tomato'; //background
+          context.fillStyle = 'DodgerBlue'; //background
           context.strokeStyle = 'white'; //border
           context.fillRect(x * SIZE_BLOCK, y * SIZE_BLOCK, SIZE_BLOCK, SIZE_BLOCK); //background
           context.strokeRect(x * SIZE_BLOCK, y * SIZE_BLOCK, SIZE_BLOCK, SIZE_BLOCK); //border
@@ -31,7 +31,7 @@ const createCanvas = () => {
     }
   };
 
-  showArea(game.area);
+  showArea(game.viewArea);
 };
 
 export default createCanvas;
