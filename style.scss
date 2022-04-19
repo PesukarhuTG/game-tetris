@@ -1,4 +1,6 @@
 $color-border: #595959;
+$color-headling: #0e83b9;
+$bgr-area: rgba(255,255,255,0.5);
 
 * {
   margin: 0;
@@ -8,12 +10,16 @@ $color-border: #595959;
 
 body {
   font-family: Arial, sans-serif;
+  /*background: url('./assets/img/pattern.jpg'), radial-gradient(85% 100% at 0% 0%, #fff 0%, #d7effa);
+  background-repeat: repeat;
+  background-attachment: fixed;*/
 }
 
 h1 {
   margin-top: 30px;
   margin-bottom: 50px;
   text-align: center;
+  color: $color-headling;
 }
 
 .title {
@@ -30,4 +36,5 @@ h1 {
   display: block;
   border: 2px solid $color-border;
   border-top: 0;
+  background-color: $bgr-area;
 }

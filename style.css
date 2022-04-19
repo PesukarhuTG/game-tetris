@@ -7,12 +7,16 @@
 
 body {
   font-family: Arial, sans-serif;
+  /*background: url('./assets/img/pattern.jpg'), radial-gradient(85% 100% at 0% 0%, #fff 0%, #d7effa);
+  background-repeat: repeat;
+  background-attachment: fixed;*/
 }
 
 h1 {
   margin-top: 30px;
   margin-bottom: 50px;
   text-align: center;
+  color: #0e83b9;
 }
 
 .title {
@@ -29,5 +33,6 @@ h1 {
   display: block;
   border: 2px solid #595959;
   border-top: 0;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 /*# sourceMappingURL=style.css.map */
