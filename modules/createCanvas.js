@@ -15,13 +15,16 @@ const createCanvas = () => {
   const context = canvas.getContext('2d');
 
   const showArea = area => {
+    //Step2:clear figure's step
+    context.clearRect(0, 0, canvas.width, canvas.height);
+
     for (let y = 0; y < area.length; y++) {
       const line = area[y];
 
       for (let x = 0; x < line.length; x++) {
         const block = line[x];
 
-        if (block === 'x') {
+        if (block !== 'o') {
           context.fillStyle = 'DodgerBlue'; //background
           context.strokeStyle = 'white'; //border
           context.fillRect(x * SIZE_BLOCK, y * SIZE_BLOCK, SIZE_BLOCK, SIZE_BLOCK); //background
@@ -30,6 +33,30 @@ const createCanvas = () => {
       }
     }
   };
+
+  //Step1: move figure
+  window.addEventListener('keydown', e => {
+    const key = e.code;
+
+    switch (key) {
+      case 'ArrowLeft':
+        game.moveLeft();
+        showArea(game.viewArea);
+        break;
+      case 'ArrowRight':
+        game.moveRight();
+        showArea(game.viewArea);
+        break;
+      case 'ArrowDown':
+        game.moveDown();
+        showArea(game.viewArea);
+        break;
+      case 'ArrowUp':
+        game.rotateTetromino();
+        showArea(game.viewArea);
+        break;
+    }
+  });
 
   showArea(game.viewArea);
 };
