@@ -8,6 +8,16 @@ const createCanvas = () => {
   const ROWS = 20
   const container = document.querySelector('.container');
 
+  const colors = {
+    J: 'DarkCyan',
+    I: 'MediumVioletRed',
+    O: 'Cyan',
+    L: 'Green',
+    2: 'Salmon',
+    T: 'BlueViolet',
+    S: 'Chocolate'
+  };
+
   const canvas = document.createElement('canvas');
   canvas.classList.add('game-area');
   container.append(canvas);
@@ -29,7 +39,7 @@ const createCanvas = () => {
         const block = line[x];
 
         if (block !== 'o') {
-          context.fillStyle = 'DodgerBlue'; //background
+          context.fillStyle = colors[block]; //background
           context.strokeStyle = 'white'; //border
           context.fillRect(x * SIZE_BLOCK, y * SIZE_BLOCK, SIZE_BLOCK, SIZE_BLOCK); //background
           context.strokeRect(x * SIZE_BLOCK, y * SIZE_BLOCK, SIZE_BLOCK, SIZE_BLOCK); //border
