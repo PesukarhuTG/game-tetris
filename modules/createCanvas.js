@@ -1,4 +1,6 @@
-import game from './gameLogic.js';
+import { Game } from './game.js';
+
+const game = new Game();
 
 const createCanvas = () => {
   const SIZE_BLOCK = 30;
