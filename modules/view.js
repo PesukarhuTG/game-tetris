@@ -1,4 +1,4 @@
-import { SIZE_BLOCK, COLUMNS, ROWS } from './createCanvas.js';
+import { SIZE_BLOCK, COLUMNS, ROWS } from '../script.js';
 
 export class View {
   constructor(container) {

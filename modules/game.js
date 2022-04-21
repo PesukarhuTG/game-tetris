@@ -1,5 +1,5 @@
 import { tetrominoes } from './tetrominoes.js';
-import { COLUMNS, ROWS } from './createCanvas.js';
+import { COLUMNS, ROWS } from '../script.js';
 
 export class Game {
   area = [
