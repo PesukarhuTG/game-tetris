@@ -2,10 +2,11 @@ import { Game } from './game.js';
 
 const game = new Game();
 
+export const COLUMNS = 10;
+export const ROWS = 20;
+
 const createCanvas = () => {
   const SIZE_BLOCK = 30;
-  const COLUMNS = 10;
-  const ROWS = 20
   const container = document.querySelector('.container');
 
   const colors = {
