@@ -26,6 +26,8 @@ export class Game {
 
   activeTetromino = this.createTetromino();
 
+  nextTetromino = this.createTetromino();
+
   createTetromino() {
     const keys = Object.keys(tetrominoes);
     const letterTetromino = keys[Math.floor(Math.random() * keys.length)];
@@ -40,6 +42,11 @@ export class Game {
       x: 3,
       y: 0
     }
+  }
+
+  changeTetromino() {
+    this.activeTetromino = this.nextTetromino;
+    this.nextTetromino = this.createTetromino();
   }
 
   moveLeft() {
@@ -129,5 +136,7 @@ export class Game {
         }
       }
     }
+
+    this.changeTetromino();
   }
 };
