@@ -2,14 +2,16 @@ import game from './gameLogic.js';
 
 const createCanvas = () => {
   const SIZE_BLOCK = 30;
+  const COLUMNS = 10;
+  const ROWS = 20
   const container = document.querySelector('.container');
 
   const canvas = document.createElement('canvas');
   canvas.classList.add('game-area');
   container.append(canvas);
 
-  canvas.width = SIZE_BLOCK * 10;
-  canvas.height = SIZE_BLOCK * 20;
+  canvas.width = SIZE_BLOCK * COLUMNS;
+  canvas.height = SIZE_BLOCK * ROWS;
 
   //need to create the context for canvas
   const context = canvas.getContext('2d');
