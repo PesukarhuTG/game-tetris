@@ -24,38 +24,23 @@ export class Game {
     ['x', 'x', 'x', 'o', 'x', 'x', 'o', 'o', 'o', 'x',],
   ];
 
-  activeTetromino = {
-    x: 3,
-    y: 0,
-    block: [
-      ['o', 'x', 'o'],
-      ['o', 'x', 'o'],
-      ['x', 'x', 'o'],
-    ],
-    rotationIndex: 0,
-    rotation: [
-      [
-        ['o', 'x', 'o'],
-        ['o', 'x', 'o'],
-        ['x', 'x', 'o'],
-      ],
-      [
-        ['x', 'o', 'o'],
-        ['x', 'x', 'x'],
-        ['o', 'o', 'o'],
-      ],
-      [
-        ['o', 'x', 'x'],
-        ['o', 'x', 'o'],
-        ['o', 'x', 'o'],
-      ],
-      [
-        ['o', 'o', 'o'],
-        ['x', 'x', 'x'],
-        ['o', 'o', 'x'],
-      ],
-    ]
-  };
+  activeTetromino = this.createTetromino();
+
+  createTetromino() {
+    const keys = Object.keys(tetrominoes);
+    const letterTetromino = keys[Math.floor(Math.random() * keys.length)];
+    const rotation = tetrominoes[letterTetromino];
+    const rotationIndex = Math.floor(Math.random() * rotation.length);
+    const block = rotation[rotationIndex];
+
+    return {
+      block,
+      rotationIndex,
+      rotation,
+      x: 3,
+      y: 0
+    }
+  }
 
   moveLeft() {
     if (this.checkOutPosition(this.activeTetromino.x - 1, this.activeTetromino.y)) {
