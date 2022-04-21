@@ -2,12 +2,12 @@ export class Controller {
   constructor(game, view) {
     this.game = game;
     this.view = view;
-    this.view.init();
   }
 
   init(codeKey) {
     window.addEventListener('keydown', e => {
       if (e.code === codeKey) {
+        this.view.removePreview();
         this.view.init();
         this.start();
       }

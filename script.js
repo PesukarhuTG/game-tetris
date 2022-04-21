@@ -10,6 +10,5 @@ const game = new Game();
 const view = new View(document.querySelector('.container'));
 const controller = new Controller(game, view);
 
-
 //game start
 controller.init('Enter');

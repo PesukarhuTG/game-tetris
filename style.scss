@@ -38,3 +38,13 @@ h1 {
   border-top: 0;
   background-color: $bgr-area;
 }
+
+.message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border: 1px solid $color-headling;
+  font-size: 30px;
+  z-index: 2;
+}
